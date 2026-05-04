@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>knycaloocan.org</title>
+</head>
+<header>
+    <nav class="navbar"> 
+        <div class="logo"> <img src="images/650214766_957023653841620_2860628255667724414_n.jpg" alt="Caloocan logo"> <h2>KNY Caloocan</h2></div>
+
+        <ul class="navlinks">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About us</a></li>
+            <li><a href="program.html" class="nav-link">Programs</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li> 
+            <li><a href="donate.html" class="nav-link donate active">DONATE</a></li>
+        </ul>
+    </nav>   
+</header>
+
+<body>
+
+    <section class="contact">
+        <p><span class="git-glass">GET IN TOUCH</span></p>
+         <div class="contact-content">
+            <h1>Contact Us</h1>
+            <p>Have questions, want to partner, or need assistance? We are here to help. Reach out and let us
+                 build stronger communities together.</p>  
+                 
+
+        </section>
+
+        <section class="info">
+
+          <div class="container">
+
+    
+    <div class="row">
+
+     
+        <div class="column info">
+            <h2>Office Information</h2>
+
+            <p><strong><span class="highlights">Address:</span></strong><br>
+           Bagong Barrio South Caloocan City Hall Compound,<br>
+            Caloocan City, Metro Manila 1400</p>
+
+            <p><strong><span class="highlights">Phone:</span></strong><br>
+            123-456-789</p>
+
+            <p><strong><span class="highlights">Email:</span></strong><br>
+            example@email.com</p>
+
+            <p><strong><span class="highlights">Office Hours:</span></strong><br>
+            Mon–Fri 8:00 AM – 5:00 PM</p>
+
+        </div>
+
+        
+        <div class="column">
+    <h2>Send a Message</h2>
+
+    <form id="contact-form">
+        <input type="text" name="from_name" placeholder="Your Name" required>
+        <input type="email" name="from_email" placeholder="Your Email" required>
+        <input type="text" name="subject" placeholder="Subject">
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</div>
+
+    </div>
+
+   
+    <div class="map-section">
+        <h2>Our Location</h2>
+        <iframe 
+            src="https://maps.google.com/maps?q=Caloocan City Hall&t=&z=13&ie=UTF8&iwloc=&output=embed">
+        </iframe>
+    </div>
+
+    <div class="faq">
+        <h2>FAQ</h2>
+
+        <div class="faq-item">
+            <h4>What are your office hours?</h4>
+            <p>We are open Monday to Friday, 8:00 AM to 5:00 PM.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>How can I contact you?</h4>
+            <p>You can call us or send a message using the form above.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>Where are you located?</h4>
+            <p>We are located at Bagong Barrio South Caloocan City Hall Compound.</p>
+        </div>
+
+    </div>
+
+</div>
+
+        </section>
+
+
+
+
+
+
+
+
+
+
+         <footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-brand">
+      <h3>💚 KNY Caloocan</h3>
+      <p>Building stronger communities together in Caloocan City.</p>
+    </div>
+
+    <div class="footer-links">
+
+      <div>
+        <h4>About</h4>
+        <a href="#">Who We Are</a>
+        <a href="#">Mission & Vision</a>
+      </div>
+
+      <div>
+        <h4>Programs</h4>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <p>South Caloocan City, Metro Manila</p>
+        <p>hello@knycaloocan.org</p>
+        <p>(02) 8123-4567</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 KNY Caloocan Cares. All rights reserved.</p>
+  </div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    emailjs.init("hhwd-iBRJyHK5603j");
+
+    document.getElementById("contact-form").addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        emailjs.sendForm(
+            "service_71zpi9h",
+            "template_k1j6q1q",
+            this
+        ).then(function() {
+            alert("Message sent successfully!");
+        }, function(error) {
+            console.log(error);
+            alert("Failed to send message");
+        });
+    });
+
+});
+</script>
+
+
+   
+</body>
+</html>
